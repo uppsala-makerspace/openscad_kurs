@@ -18,8 +18,8 @@ var man lär sig att designa 3D modeller med OpenSCAD.
 - Var: [Uppsala Makerspace](https://www.uppsalamakerspace.se/),
   allmänrum 1:e våningen
 - När:
-  - Onsdager 19.00-21.00 (19 augusti och senare)
-  - Lördager 13.00-15.00 (5 september och senare)
+    - Onsdager 19.00-21.00 (19 augusti och senare)
+    - Lördager 13.00-15.00 (5 september och senare)
 - [Veckoschemat](veckoschemat.md)
 - [Böcker](boecker.md)
 - [Vanliga frågor](vanliga_fraagor.md)

@@ -91,7 +91,7 @@ Javisst!
 Det kostar ingenting första gången,
 det är viktigt att deltagarna känner att de hamnat rätt!
 
-###  Kan jag sluta när som helst?
+### Kan jag sluta när som helst?
 
 Självklart kan du sluta när som helst!
 
