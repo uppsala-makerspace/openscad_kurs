@@ -68,10 +68,6 @@ Det bästa sättet att lära sig är att få berätta för en kompis.
 - Sitter det en deltagare vid ditt bord? Om ja, då är hen.
 - Om du sitter själv vid ditt bord eller ingen vet, fråga en lärare / vuxen.
 
-## Vad händer om en ny student kommer in?
-
-Se [ditt första besök](ditt_foersta_besoek/README.md) hur detta kan bli!
-
 ## Jag kan inte komma på ett kurstillfälle
 
 Inget problem!
