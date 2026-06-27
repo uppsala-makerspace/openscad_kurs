@@ -9,8 +9,7 @@ You can contribute by:
 
 You can do so by:
 
-- Sending an email to `rjcbilderbeek@gmail.com`
-- For questions, you can [create an issue](https://github.com/uppsala-makerspace/loerdagskurser/issues)
+- For questions, you can [create an issue](https://github.com/uppsala-makerspace/openscad_kurs/issues)
 - Textual changes go via pull requests.
   Whatever these are, these are created when clicking the 'Edit page' icon
   located at the top-right of each page.
