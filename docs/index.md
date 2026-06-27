@@ -13,7 +13,7 @@ var man lär sig att designa 3D modeller med OpenSCAD.
 
 ## Kursinformationen
 
-Vecka| Dag             |När        |
+Vecka| Dag             |När        |Vad
 -----|-----------------|-----------|-------------------------------------
 34   |Onsdag 2026-08-19|19.00-21-00|1. Första lektion på onsdag
 34   |Lördag 2026-08-22|.          |Ej kurs än <!-- Göra reklam -->
