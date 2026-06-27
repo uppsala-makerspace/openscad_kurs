@@ -7,11 +7,11 @@ tags:
 
 # OpenSCAD kurs
 
+![OpenSCAD kurs logo](logo/openscadkurs_logo.png)
+
 OpenSCAD kurs är en kurs hos
 [Uppsala Makerspace](https://www.uppsalamakerspace.se/),
 var man lär sig att designa 3D modeller med OpenSCAD.
-
-## Kursinformationen
 
 - För vem: medlemmar av [Uppsala Makerspace](https://www.uppsalamakerspace.se/)
   av ålder 8 och äldre
