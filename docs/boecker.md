@@ -6,7 +6,7 @@ Bok|Webbläsare-vänligt                            |Att ladda ner
 ---|----------------------------------------------|--------------------------------------------
 1  |[Bok 1 (Markdown)](generated_10_mars_bok_1.md)|[Bok 1 (Microsoft Word)](10_mars_bok_1.docx)
 2  |[Bok 2 (Markdown)](generated_18_mars_bok_2.md)|[Bok 2 (Microsoft Word)](18_mars_bok_2.docx)
-3  |[Bok 3 (Markdown)](generated_21_Juni_bok_3.md)|[Bok 3 (Microsoft Word)](21_Juni_bok_3.docx)
+3  |[Bok 3 (Markdown)](generated_21_juni_bok_3.md)|[Bok 3 (Microsoft Word)](21_juni_bok_3.docx)
 
 <!-- markdownlint-enable MD013 -->
 

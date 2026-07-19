@@ -4,8 +4,8 @@
 
 2026-03-10 Atombjörn
 
-![](media/media/image1.jpeg){width="2.949215879265092in"
-height="2.422871828521435in"}
+![](media/media/image1.jpeg)
+
 
 **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_**
 
@@ -43,8 +43,8 @@ Bara att du är nyfiken och vill komma igång med 3D.
 
 Från ide till färdig figur.
 
-![](media/media/image2.png){width="6.295833333333333in"
-height="1.4152777777777779in"}
+![](media/media/image2.png)
+
 
 Du har en ide om vad du vill skriva ut i 3D. Du skapar det i ett
 CAD-program,
@@ -61,8 +61,8 @@ Gcode-filen sänds antingen med en USB eller via WiFi till skrivaren.
 
 **OpenScad**
 
-![](media/media/image3.jpeg){width="4.2201837270341205in"
-height="5.509142607174104in"}
+![](media/media/image3.jpeg)
+
 
 Ett exemplar finns på Makerspace.
 
@@ -81,8 +81,8 @@ och förändras på tusentals sätt.
 
 **PRIMITIVES**
 
-![](media/media/image4.jpeg){width="5.916816491688539in"
-height="8.009174321959755in"}ALLT om primitives och hur dom kan
+![](media/media/image4.jpeg)
+ALLT om primitives och hur dom kan
 kombineras finns i boken
 
 "Programming with OPENSCAD"
@@ -93,11 +93,11 @@ Innan du fortsätter skall du ha skapat en mapp där du sparar dina filer.
 
 När du öppnar programmet ser du:
 
-![](media/media/image5.png){width="5.440367454068242in"
-height="3.597661854768154in"}
+![](media/media/image5.png)
 
-![](media/media/image6.png){width="5.504166666666666in"
-height="0.4311931321084864in"}
+
+![](media/media/image6.png)
+
 
 Och ett tomt fält EDITORN till vänster om BILDFÄLTET.
 
@@ -108,8 +108,8 @@ Skriv i editorn: OBS! semikolon ;
 cube(10);
 
 Kör genom att trycka på
-![](media/media/image7.png){width="0.5326509186351706in"
-height="0.4311931321084864in"} Vips så dyker det upp en kub i
+![](media/media/image7.png)
+ Vips så dyker det upp en kub i
 bildfältet.
 
 Döp modellen och spara den. Den sparade filen har fått tillägget
@@ -117,19 +117,19 @@ Döp modellen och spara den. Den sparade filen har fått tillägget
 
 **Steg 2: Rendera**
 
-Tryck på ![](media/media/image8.png){width="0.5045877077865267in"
-height="0.3834864391951006in"} En ***stl*** fil skapas. Det syns inte.
+Tryck på ![](media/media/image8.png)
+ En ***stl*** fil skapas. Det syns inte.
 
-Tryck på ![](media/media/image9.png){width="0.5272834645669291in"
-height="0.3853215223097113in"} Du ombeds att spara filen. Den får samma
+Tryck på ![](media/media/image9.png)
+ Du ombeds att spara filen. Den får samma
 namn som scad-filen med tillägget ***.stl***.
 
 **Steg 3: Slica**
 
 Öppna programmet PrucaSlicer!
 
-![](media/media/image10.png){width="3.3961209536307964in"
-height="3.2018350831146107in"}
+![](media/media/image10.png)
+
 
 Välj en printer och starta den. Skriv upp printerns IP-adress.
 
@@ -143,13 +143,13 @@ Ditt objekt dyker upp på **Platan.** (Plater).
 
 Tryck på **Slice now**
 
-![](media/media/image11.png){width="4.055045931758531in"
-height="1.2264041994750656in"}
+![](media/media/image11.png)
+
 
 Tryck på **Export G-code**
 
-![](media/media/image12.png){width="4.339449912510936in"
-height="1.9334186351706037in"}
+![](media/media/image12.png)
+
 
 Spara filen som fått samma namn som scad-filen.
 
@@ -165,11 +165,11 @@ Starta webbläsare CROME.
 
 Ange skrivarens IP-adress.
 
-![](media/media/image13.jpeg){width="3.9819061679790027in"
-height="2.279076990376203in"}
+![](media/media/image13.jpeg)
 
-![](media/media/image14.png){width="3.98125in"
-height="2.211953193350831in"}
+
+![](media/media/image14.png)
+
 
 Bilden visar hur lång tid det tar att skriva ut modellen. *Estimated
 printing time*.
@@ -192,5 +192,5 @@ Filerna bör finas på ett USB-minne som Björn Engström har????
 Jag vet ej hur man installerar dem???
 
 ![Leende ansikte utan
-fyllning](media/media/image15.png){width="1.0642202537182852in"
-height="1.0642202537182852in"}
+fyllning](media/media/image15.png)
+

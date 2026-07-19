@@ -22,8 +22,8 @@ Gör ett hål med *difference*
 
 **KOORDINATSYSTEM**
 
-![](media/media/image1.jpeg){width="5.678898731408574in"
-height="4.238596894138233in"}
+![](media/media/image1.jpeg)
+
 
 **PARENTESER**
 
@@ -42,15 +42,15 @@ Skriv: OBS! semikolon ;
 cube(10);
 
 Kör genom att trycka på
-![](media/media/image2.png){width="0.6048228346456693in"
-height="0.5443405511811024in"} Vips så dyker det upp en kub i
+![](media/media/image2.png)
+ Vips så dyker det upp en kub i
 bildfältet.
 
 Prova!
 
 cube(\[10,20,30\]);
-![](media/media/image3.png){width="0.3472222222222222in"
-height="0.2638888888888889in"} En ny kub träder fram.
+![](media/media/image3.png)
+ En ny kub träder fram.
 
 **Uppgift 2: Flytta kuben.**
 
@@ -65,8 +65,8 @@ vänster knapp och röra den fram och tillbaka.
 
 Experimentera med olika värden för kuben och x,y,x!
 
-![](media/media/image4.png){width="1.4678904199475065in"
-height="1.6739096675415572in"}
+![](media/media/image4.png)
+
 
 Det är den punkten som flyttas när koordinaterna i translate ändras.
 
@@ -90,8 +90,8 @@ translate(\[20,0,0\])
 
 cube(10);
 
-![](media/media/image2.png){width="0.6048228346456693in"
-height="0.5443405511811024in"}
+![](media/media/image2.png)
+
 
 Variera värdet på x från 1 till 200 och se vad som händer!
 
@@ -148,8 +148,8 @@ cube(\[10,5,10\]);
 Observera att i 5a skär man ur sfären ur kuben medans man i 5b skär
 kuben ur sfären.
 
-![](media/media/image5.png){width="4.394495844269466in"
-height="2.5849978127734032in"}
+![](media/media/image5.png)
+
 
 **Uppgift 6: Gör en kon**
 
@@ -171,8 +171,8 @@ translate(\[40,0,0\])
 
 cylinder(h=20,r1=5,r2=0);
 
-![](media/media/image6.png){width="3.543510498687664in"
-height="2.357798556430446in"}
+![](media/media/image6.png)
+
 
 **Uppgift 7: Öppna OpenScad Hompage.**
 
