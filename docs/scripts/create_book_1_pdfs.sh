@@ -28,9 +28,10 @@ if [ ! -d ${build_folder} ]; then
   exit 1
 fi
 
-cp ../foreword/*.*           ${build_folder}; mv ${build_folder}/README.md ${build_folder}/README_00.md
-cp ../books/book_1/*.*       ${build_folder}; mv ${build_folder}/README.md ${build_folder}/README_01.md
-cp openscad_book_style.theme ${build_folder}
+cp foreword/*.*                      ${build_folder}; mv ${build_folder}/README.md ${build_folder}/README_00.md
+cp books/book_1/*.*                  ${build_folder}; mv ${build_folder}/README.md ${build_folder}/README_01.md
+cp --recursive books/book_1/media    ${build_folder}
+cp scripts/openscad_book_style.theme ${build_folder}
 
 cd "${build_folder}" || exit 41
 
@@ -43,11 +44,11 @@ cd "${build_folder}" || exit 41
 # Code has highlights following the tango color scheme
 # Thinner margin of 0.5 inch
 # Do not cut code blocks
-pandoc README.md -o book_contents.pdf --toc --toc-depth=1 --highlight-style=arduino_book_style.theme -V geometry:margin=0.5in
+pandoc README.md -o book_contents.pdf --toc --toc-depth=1 --highlight-style=openscad_book_style.theme -V geometry:margin=0.5in
 
-cp book_contents.pdf ../../books/book_1/book_contents.pdf
+cp book_contents.pdf ../books/book_1/book_contents.pdf
 
-cd ../../books/book_1 || exit 42
+cd ../books/book_1 || exit 42
 pdfunite front_page.pdf book_contents.pdf book.pdf
 
 # Make booklet

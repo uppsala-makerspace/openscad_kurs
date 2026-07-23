@@ -7,7 +7,7 @@ edit_uri: blob/main/docs/
 nav:
   - Main page: index.md
   - Veckoschemat: veckoschemat.md
-  - Böcker: boecker.md
+  - Böcker: books/README.md
   - Vanliga frågor: vanliga_fraagor.md
 
 theme:
