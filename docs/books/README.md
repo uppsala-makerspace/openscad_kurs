@@ -3,8 +3,8 @@
 <!-- markdownlint-disable MD013 --><!-- Table rows must be put on one line, hence 80 chars is unavoidable -->
 
 No.|Internet vänligt         |Att ladda ner
----|-------------------------|------------------------
-1  |[Bok 1](book_1/README.md)|[Bok 1](book_1/book.pdf)
+---|-------------------------|--------------------------------------------------------------------------------
+1  |[Bok 1](book_1/README.md)|[Häfte 1 (A5 format) ](book_1/booklet.pdf) [Bok 1 (A4 format) ](book_1/book.pdf)
 2  |[Bok 2](book_1/README.md)|.
 3  |[Bok 3](book_1/README.md)|.
 
