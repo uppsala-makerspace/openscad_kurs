@@ -1,0 +1,803 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>1. Introduktion och 3D ritning med OpenSCAD - OpenSCAD kurs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduktion-och-3d-ritning-med-openscad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenSCAD kurs" class="md-header__button md-logo" aria-label="OpenSCAD kurs" data-md-component="logo">
+      
+  <img src="../../logo/openscadkurs_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenSCAD kurs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Introduktion och 3D ritning med OpenSCAD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/uppsala-makerspace/openscad_kurs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Main page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../veckoschemat/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Veckoschemat
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../books/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Böcker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../vanliga_fraagor/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Vanliga frågor
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenSCAD kurs" class="md-nav__button md-logo" aria-label="OpenSCAD kurs" data-md-component="logo">
+      
+  <img src="../../logo/openscadkurs_logo.png" alt="logo">
+
+    </a>
+    OpenSCAD kurs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/uppsala-makerspace/openscad_kurs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../veckoschemat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Veckoschemat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kapitel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Böcker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vanliga_fraagor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vanliga frågor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/uppsala-makerspace/openscad_kurs/blob/main/docs/chapters/chapter_1/README.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/uppsala-makerspace/openscad_kurs/raw/main/docs/chapters/chapter_1/README.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="1-introduktion-och-3d-ritning-med-openscad">1. Introduktion och 3D ritning med OpenSCAD<a class="headerlink" href="#1-introduktion-och-3d-ritning-med-openscad" title="Anchor link to this section for reference">&para;</a></h1>
+<p>I det här kapitlet lär vi oss grunderna i
+OpenSCAD. Vi följer kapitel 1 i boken
+'Programming with OpenSCAD' av Justin Gohde
+och Marius Kintel.</p>
+<p><img alt="Programming with OpenSCAD" src="programming_with_openscad_book_cover.jpg" /></p>
+<h2 id="11-att-lasa-engelska">1.1. Att läsa Engelska<a class="headerlink" href="#11-att-lasa-engelska" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Boken är på Engelska.
+Om du behöver översätta ord till svenska,
+är Google Translate en bra webbsida:</p>
+<p>I en webläsare (t.ex. Firefox, Chrome, Chromium, Edge, Opera)
+surfa till <code>https://translate.google.com</code> (det räcker
+med att skriva <code>translate.google.com</code>).</p>
+<p>Välj språk och dina meningar blir översatta:</p>
+<p><img alt="Dina meningar blir översatta" src="google_translate.png" /></p>
+<h2 id="12-att-oppna-openscad">1.2. Att öppna OpenSCAD<a class="headerlink" href="#12-att-oppna-openscad" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Om du använder våra kursdatorer,
+kan du hitta OpenSCAD ikonen
+på skrivbordets vänstra sida:</p>
+<p><img alt="OpenSCAD ikonen på skrivbordet" src="openscad_on_desktop_annotated.png" /></p>
+<p>Klicka på ikonen och OpenSCAD startar.</p>
+<p>Om det inte finns någon OpenSCAD ikon:</p>
+<p>Tryck på Windows tangenten</p>
+<p><img alt="Tryck på Windows tangenten" src="windows_key.jpg" /></p>
+<p>Klicka på 'Type to search':</p>
+<p><img alt="Klicka på 'Type to search'" src="ubuntu_search.png" /></p>
+<p>Skriv ner <code>openscad</code> och klicka på OpenSCAD ikonen</p>
+<p><img alt="Skriv ner openscad och klick på OpenSCAD ikonen" src="ubuntu_seach_openscad_top.png" /></p>
+<h2 id="13-att-starta-en-ny-ritning-i-openscad">1.3. Att starta en ny ritning i OpenSCAD<a class="headerlink" href="#13-att-starta-en-ny-ritning-i-openscad" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Om du får den 'Welcome to OpenSCAD' föster,
+klicka på 'New':</p>
+<p><img alt="Klicka på 'New'" src="openscad_welcome_screen_click_new_4x_wider.png" /></p>
+<p>Nu kan du skapa 3D modeller i OpenSCAD:</p>
+<p><img alt="Nu kan du skapa 3D modeller i OpenSCAD" src="openscad_on_ubuntu_2x_wider.png" /></p>
+<h2 id="13-vad-ar-openscad">1.3. Vad är OpenSCAD?<a class="headerlink" href="#13-vad-ar-openscad" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Av kapittel 'Introduction' i boken, läs början och paragraf
+'What is OpenSCAD?', på sidorna <code>xv</code> (Romerska 15)  och <code>xvi</code> (Romerska 16).</p>
+<p>Hur uttalar man 'OpenSCAD'?</p>
+<h3 id="13-svar">1.3. Svar<a class="headerlink" href="#13-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<p>På Engelska: 'Open-S-CAD', på svenska: 'open-S-kad'.</p>
+<h2 id="14-vad-ar-3d-punkter-och-koordinater">1.4. Vad är 3D punkter och koordinater?<a class="headerlink" href="#14-vad-ar-3d-punkter-och-koordinater" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Om du har aldrig hört talas om koordinater,
+I kapitel 'Introduction' i boken,
+läs hela paragrafen 'A brief introduction to 3D design with OpenSCAD',
+på sidorna <code>xxii</code> (Romerska 22)  och <code>xviii</code> (Romerska 23).</p>
+<p>Se Figur 1 på sidan xxii:</p>
+<ol>
+<li>Vilken koordinater har origo (origo är punkten där X, Y, Z axlarna möts)</li>
+<li>Hur uttalar man koordinaterna för origo?</li>
+<li>Varför har koordinater tre siffror?</li>
+<li>Vilka koordinater har punkten P?</li>
+<li>Hur läser man koordinaten för P på svenska? Använd ord som 'åt höger',
+  'åt vänster', 'uppåt', neråt', usw.</li>
+<li>Vilket koordinat har punkten 5 vänster av P?</li>
+</ol>
+<h3 id="14-svar">1.4. Svar<a class="headerlink" href="#14-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li>Koordinaten är <code>(0,0,0)</code></li>
+<li>Det uttalas som 'noll komma noll komma noll'</li>
+<li>För att 3D har tre riktningar: X, Y och Z (Se figur 1).</li>
+<li>Koordinaten för P är <code>(3,0,5)</code></li>
+<li><code>(3,0,5)</code> uttalar man på svenska som: '3 i x-led, noll i y-led
+  och 5 i z-led.</li>
+<li>Koordinaten 5 vänster av P är <code>(-2,0,5)</code></li>
+</ol>
+<h2 id="15-att-rita-en-kub">1.5. Att rita en kub<a class="headerlink" href="#15-att-rita-en-kub" title="Anchor link to this section for reference">&para;</a></h2>
+<p>I kapitel 1 '3D drawing with OpenSCAD', läs sidorna 1 till 3,
+till (och inklusive) 'Drawing Cuboids with <code>cube</code>.
+Kör koden i OpenSCAD.</p>
+<ol>
+<li>Hur läser man på svenska <code>cube([5, 10, 20]);</code>?</li>
+<li>Vad betyder semicolon (<code>;</code>)? Tips: vilken tecken använder människor
+  i skrift istället?</li>
+<li>Vad betyder den hakparenteser (<code>[</code> och <code>]</code>)? Tips: vad heter stället där
+  en av hörnar av kuben?</li>
+<li>Ändra koden till <code>cube(5);</code>. Hur uttalar man på svenska vad koden gör?</li>
+</ol>
+<h3 id="15-svar">1.5. Svar<a class="headerlink" href="#15-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li>På svenska läser man <code>cube([5, 10, 20]);</code> som: 'Kära dator,
+ rita gärna ut en kub som är 5 lång, 10 bred och 20 hög'</li>
+<li>Semikolon i OpenSCAD (<code>;</code>) betyder att satsen är slut och värdet fastställt.</li>
+<li>Hakparenteserna betyder att detta är en koordinat. Ett av hörnen på kuben
+  har koordinaten `(5, 10, 20).</li>
+<li>På svenska uttalar man <code>cube(5);</code> som kära dator, rita ut en kub med
+   alla sidor 5'</li>
+</ol>
+<h2 id="16-att-rita-klot">1.6. Att rita klot<a class="headerlink" href="#16-att-rita-klot" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 3-4, 'Drawing Spheres with sphere'.</p>
+<p>Kolla på första koden:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sphere</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+<p>Texten säger att klotets radie är 10.</p>
+<ol>
+<li>Vad är svenska översättning av engelska 'radius'?</li>
+<li>Vad menas med detta?</li>
+<li>En annat sätt att beskriva storleken på ett klot är att använda
+  ordet 'diameter'. Vad är detta?</li>
+</ol>
+<h2 id="16-svar">1.6. Svar<a class="headerlink" href="#16-svar" title="Anchor link to this section for reference">&para;</a></h2>
+<ol>
+<li>Engelska 'radius' är 'radie' i svenska</li>
+<li>Det är distansen mellan klotets centrum och kanten.</li>
+<li>Diametern är distansen mellan ena sida till andra sida av klotet.</li>
+</ol>
+<h2 id="17-att-rita-cylindrar-och-koner">1.7. Att rita cylindrar och koner<a class="headerlink" href="#17-att-rita-cylindrar-och-koner" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 4-6, 'Drawing
+Cylinders and Cones with cylinder'.</p>
+<p>Kolla på första koden:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">cylinder</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">r1</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div>
+<ol>
+<li>Vilket Engelskt ord är <code>h</code> en förkortning av? Vad heter det på svenska?</li>
+<li>Vilket Engelskt ord är <code>r</code> en förkortning av? Vad heter det på svenska?</li>
+</ol>
+<h3 id="17-svar">1.7. Svar<a class="headerlink" href="#17-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li><code>h</code> är en förkortnig av engelska 'height'. På svenska kaller i det 'höjd'.</li>
+<li><code>r</code> är en förkortnig av engelska 'radius'. På svenska kaller i det 'radie'.</li>
+</ol>
+<h2 id="18-att-importera">1.8. Att importera<a class="headerlink" href="#18-att-importera" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 6-7, 'Importing 3D Models with import'.</p>
+<p>Kör koden på sida 6. Vad ser du? Varför?</p>
+<h3 id="18-svar">1.8. Svar<a class="headerlink" href="#18-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<p>Koden visar ingenting! Så här ser det ut:</p>
+<p><img alt="Koden visar ingenting" src="import_3dbenchy_stl.png" /></p>
+<p>Det är på grund av att du inte har den filen (<code>3Dbenchy.stl</code>) du behöver.</p>
+<h2 id="19-att-flytta">1.9. Att flytta<a class="headerlink" href="#19-att-flytta" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 7-10, 'Modifying basic shapes'
+till (och inklusive) 'Moving Shapes to a Specific Location with translate'.</p>
+<p>Kolla på den här koden:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">translate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="n">cube</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">]);</span>
+</code></pre></div>
+<ol>
+<li>En upprepning: hur läser man på svenska <code>cube([4, 5, 6])</code>?</li>
+<li>Hur läser man på svenska <code>translate([1, 2, 3])</code>?</li>
+<li>Ändra koden till <code>translate([1, 2, 3]); cube([4, 5, 6]);</code>.
+  Vad händer? Varför?</li>
+</ol>
+<h3 id="19-svar">1.9. Svar<a class="headerlink" href="#19-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li>På svenska läser man <code>cube([4, 5, 6])</code> som: 'kära dator, rita ut
+  en kub som är 4 lång, 5 bred och 6 hög'.</li>
+<li>På svenska läser man <code>translate([1, 2, 3])</code> som: 'kära dator, flyttar
+  saken efter den här kod med 1 steg i x-led, 2 steg i y-led och 3 steg i z-led'.</li>
+<li>Kuben blir ritat på den vanliga ställe (dvs. utan den <code>translate</code> kommand).
+  Det är på grund av den semikolon (<code>;</code>) såklart: <code>translate([1, 2, 3]);</code>
+  läser man på svenska som: 'kära dator, flytta
+  <strong>ingenting</strong> med 1 steg i x-led, 2 steg i y-led och 3 steg i z-led'.
+  Efter den fösta semikolonen blir bara kuben ritad som vanligt.</li>
+</ol>
+<h2 id="110-slata-och-jamna-klot-och-cylindrar">1.10. Släta och jämna klot och cylindrar<a class="headerlink" href="#110-slata-och-jamna-klot-och-cylindrar" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 11-12, 'Smoothing curves with <code>$fn</code>'.</p>
+<p>Kolla på de här två koderna:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Kod 1</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">sphere</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">$fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">translate</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="n">sphere</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Kod 2</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">sphere</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">translate</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="n">sphere</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">$fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</code></pre></div>
+<ol>
+<li>Hur kan man säga `$fn = 50' på svenska?</li>
+<li>Kör 'kod 1'. Blir den ena klotet slät och jämnt?</li>
+<li>Kör 'kod 2'. Blir det andra klotet ritad slät och jämnt?</li>
+</ol>
+<h3 id="110-svar">1.10. Svar<a class="headerlink" href="#110-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li>På svenska kan man läsa `$fn = 50' som 'kära dator, rita ut alla
+  kurvor med 50 linjer per cirkel'.</li>
+<li>I kod 1 blir inte det ena klotet ritad slät och jämnt:  <code>$fn</code>kommandot blev
+  bara använd för den första sfären.</li>
+<li>I kod 2 blir det andra klotet ritad slät och jämnt: <code>$fn</code>kommandot, även om
+  den rad är efter all ritningar, blev gjort först! Båda kloten blir
+  är ritade släta och jämna.</li>
+</ol>
+<h2 id="111-boolesk-algebra">1.11. Boolesk algebra<a class="headerlink" href="#111-boolesk-algebra" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 12-13, 'Combining 3D Shapes with Boolean Operations',
+inklusive textboxen på sidan 13.</p>
+<p>På svenska, hur skull du beskriva vad engelska 'boolean' är?</p>
+<h3 id="111-svar">1.11. Svar<a class="headerlink" href="#111-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<p>En engelska 'boolean' är, i svenkt, en boolean.
+En boolean är en typ av saker i världen som
+kan vara sant eller falskt. Till example,
+om du är född i sverige är sant eller falskt.</p>
+<h2 id="112-felsokning">1.12. Felsökning<a class="headerlink" href="#112-felsokning" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 13-15, 'Subtracting Shapes with difference',
+till (och inklusive) 'Debugging difference Operations with #'.</p>
+<ol>
+<li>Hur uttalar man <code>#</code> i svenska?</li>
+<li><code>#</code> viktigt för felsökning när man tar bort former. Varför är <code>#</code>
+  inte viktigt när man <strong>lägger till</strong> former (som vi har hittils gjort)?</li>
+</ol>
+<h3 id="112-svar">1.12. Svar<a class="headerlink" href="#112-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li><code>#</code> har mycket olika namn: nummertecken, brädgård, gärdsgård, stege,
+  staket, spjälstaket, fyrkant, vedstapel, haga, stockhög, grind eller fyrtagg.</li>
+<li><code>#</code> är oviktigt när man lägger till former, för att man kan direkt ser
+  den formen du har lagt till.</li>
+</ol>
+<h2 id="113-glimmande-vaggar">1.13. Glimmande väggar<a class="headerlink" href="#113-glimmande-vaggar" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 15-19, 'Avoiding "Shimmering Walls" with the <code>difference</code> Operation',
+till (och inklusive) 'Grouping Shapes with <code>union</code>'.</p>
+<p>Sven ville gör den här ritning:</p>
+<p><img alt="Kub sphär" src="cube_sphere.png" /></p>
+<p>Han har skrivit den här koden:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">intersection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="n">cube</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="n">sphere</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>Använder en nummertecken (<code>#</code>) för att visa felet. Vad är felet?</li>
+<li>Hur kan Sven fixa problemet?</li>
+</ol>
+<h3 id="113-svar">1.13. Svar<a class="headerlink" href="#113-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li>Om du lägger till en nummertecken före <code>cube</code>,
+  ser du nedstående bild. Felet är att kuben är inte centrerad.</li>
+</ol>
+<p><img alt="Kub och sphär med fel" src="cube_sphere_error.png" /></p>
+<ol>
+<li>Gör kuben centrerade med <code>cube(15, center = true);</code> istället för
+  bara <code>cube(15);</code>.</li>
+</ol>
+<h2 id="114-3d-skrivande">1.14. 3D skrivande<a class="headerlink" href="#114-3d-skrivande" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Läs sidor 19-20, 'Getting Ready for 3D Printing'.</p>
+<ol>
+<li>Vad kallar man engelska 'rendering' i svenska? Vad betyder detta?</li>
+</ol>
+<h3 id="114-svar">1.14. Svar<a class="headerlink" href="#114-svar" title="Anchor link to this section for reference">&para;</a></h3>
+<ol>
+<li>Engelska 'rendering' kallas 'rendering' på svenska också.</li>
+</ol>
+<h2 id="115-slutuppgift">1.15. Slutuppgift<a class="headerlink" href="#115-slutuppgift" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Rita varje figur på sida 22 'Design time: 3D shapes'
+i samma ordning. Visa en och en till en lärare eller visaa alla 6 samtidigt.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
