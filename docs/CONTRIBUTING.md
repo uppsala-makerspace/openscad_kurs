@@ -9,7 +9,7 @@ You can contribute by:
 
 You can do so by:
 
-- For questions, you can [create an issue](https://github.com/richelbilderbeek/openscad_kurs/issues)
+- For questions, you can [create an issue](https://github.com/uppsala-makerspace/openscad_kurs/issues)
 - Textual changes go via pull requests.
   Whatever these are, these are created when clicking the 'Edit page' icon
   located at the top-right of each page.
