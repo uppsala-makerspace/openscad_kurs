@@ -31,27 +31,15 @@ Vecka| Dag             |När        |Vad
 40   |Lördag 2026-10-03|13.00-15.00|10.
 41   |Onsdag 2026-10-07|19.00-21-00|11.
 41   |Lördag 2026-10-10|13.00-15.00|12.
-42   |Onsdag 2026-10-14|19.00-21-00|13.
 42   |Lördag 2026-10-17|13.00-15.00|14.
-43   |Onsdag 2026-10-21|19.00-21-00|15.
 43   |Lördag 2026-10-24|.          |Ej kurs, pga Höstlov
-44   |Onsdag 2026-10-28|19.00-21-00|Ej kurs, pga Höstlov
 44   |Lördag 2026-10-31|.          |Ej kurs, pga Alla Helgons dag
-45   |Onsdag 2026-11-04|19.00-21-00|16.
 45   |Lördag 2026-11-07|13.00-15.00|17.
-46   |Onsdag 2026-11-11|19.00-21-00|18.
 46   |Lördag 2026-11-14|13.00-15.00|19.
-47   |Onsdag 2026-11-18|19.00-21-00|20.
 47   |Lördag 2026-11-21|13.00-15.00|21. Mandagen <!-- Ej Johanna -->, pga [International Men's Day](https://internationalmensday.com/)
-48   |Onsdag 2026-11-25|19.00-21-00|22.
 48   |Lördag 2026-11-28|13.00-15.00|23.
-49   |Onsdag 2026-12-02|19.00-21-00|24.
 49   |Lördag 2026-12-05|.          |Ej kurs, ovningspresentation istället
-50   |Onsdag 2026-12-09|19.00-21-00|25.
 50   |Lördag 2026-12-12|.          |Ej kurs, slutpresentation istället
-51   |Onsdag 2026-12-10|19.00-21-00|26.
 51   |Lördag 2026-12-13|.          |Ej kurs, volontärfest
-52   |Onsdag 2026-12-16|19.00-21-00|27.
 52   |Lördag 2026-12-19|.          |Ej kurs, pga jul
-53   |Onsdag 2026-12-23|19.00-21-00|Ej kurs, pga jul
 53   |Lördag 2026-12-26|.          |Ej kurs, pga jul
